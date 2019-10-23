@@ -1,0 +1,14 @@
+{
+  "name": "dygbot",
+  "version": "1.0.0",
+  "description": "The new DYGBOT ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Murali",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
