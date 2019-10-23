@@ -1,6 +1,7 @@
 const fs = require("fs");
-const { prefix, token} = require("./botconfig.json");
+const { prefix} = require("./botconfig.json");
 const Discord = require("discord.js");
+const token = process.var.api_token ;
 
 
 const bot = new Discord.Client();
