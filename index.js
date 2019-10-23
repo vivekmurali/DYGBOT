@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { prefix} = require("./botconfig.json");
 const Discord = require("discord.js");
-const token = process.var.api_token ;
+var token = "NDUxODE4NjA2MzA1NzM4NzYy.XbDYig.-ZmCBycpXDLtM2YINcmK0UWOBlk" ;
 
 
 const bot = new Discord.Client();
