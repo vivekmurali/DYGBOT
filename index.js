@@ -1,7 +1,9 @@
 const fs = require("fs");
 const { prefix} = require("./botconfig.json");
 const Discord = require("discord.js");
+require('dotenv').config();
 const token = process.env.DISCORD_TOKEN;
+
 
 
 const bot = new Discord.Client();
@@ -19,9 +21,11 @@ for(const file of commandFiles){
 
 bot.on("ready", async() =>{
     console.log(`${bot.user.username} is online!`);
-    bot.user.setActivity("Bro Vivek is actually a god WTF");
-    let defaultChannel = bot.guild.channels.get('636834564450549770');
+    bot.user.setActivity("Bro Vivek is actually a god WOW");
+    /*
+    const defaultChannel = bot.guild.channels.get('636834564450549770');
     defaultChannel.sendMessage('Hello',{tts: true});
+    */
 });
 
 
@@ -44,12 +48,16 @@ bot.on("message", async message =>{
 
     if (!bot.commands.has(commandName)) return;
 
-    const command = client.commands.get(commandName)|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+    const command = bot.commands.get(commandName)
+        || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
     if (!command) {
         return message.reply('that\'s not a valid command!');
     }
 
+    if (command.guildOnly && message.channel.type !== 'text') {
+		return message.reply('I can\'t execute that command inside DMs!');
+	}
     
     if(command.args && !args.length){
         let reply = `You didn't provide any arguments, ${message.author.username}!`;

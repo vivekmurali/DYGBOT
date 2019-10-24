@@ -5,6 +5,7 @@ module.exports = {
 	description: 'List all of my commands or info about a specific command.',
 	aliases: ['commands'],
 	usage: '[command name]',
+	guildOnly: true,
 	cooldown: 5,
 	execute(message, args) {
 		const data = [];
