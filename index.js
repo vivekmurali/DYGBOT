@@ -44,8 +44,13 @@ bot.on("message", async message =>{
 
     if (!bot.commands.has(commandName)) return;
 
-    const command = bot.commands.get(commandName);
+    const command = client.commands.get(commandName)|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
+    if (!command) {
+        return message.reply('that\'s not a valid command!');
+    }
+
+    
     if(command.args && !args.length){
         let reply = `You didn't provide any arguments, ${message.author.username}!`;
         if(command.usage){
