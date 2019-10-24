@@ -1,7 +1,7 @@
 const fs = require("fs");
-const { prefix, token} = require("./botconfig.json");
+const { prefix} = require("./botconfig.json");
 const Discord = require("discord.js");
-//var token = "NDUxODE4NjA2MzA1NzM4NzYy.XbDYig.-ZmCBycpXDLtM2YINcmK0UWOBlk" ;
+const token = process.env.DISCORD_TOKEN;
 
 
 const bot = new Discord.Client();
@@ -21,6 +21,12 @@ bot.on("ready", async() =>{
     console.log(`${bot.user.username} is online!`);
     bot.user.setActivity("Bro Vivek is actually a god WTF");
 });
+
+
+
+bot.on("guildMemberAdd", member => {
+    member.guild.channels.get('636833276123807766').send(`Welcome ${member.username}!`);
+})
 
 
 
