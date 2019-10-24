@@ -26,6 +26,8 @@ bot.on("ready", async() =>{
 
 bot.on("guildMemberAdd", member => {
     member.guild.channels.get('636833276123807766').send(`Welcome ${member.username}!`);
+    member.addRole('636846372665950208');
+    console.log(`${member.username} joined and was given the pleb role`);
 })
 
 
