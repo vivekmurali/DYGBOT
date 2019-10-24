@@ -20,6 +20,8 @@ for(const file of commandFiles){
 bot.on("ready", async() =>{
     console.log(`${bot.user.username} is online!`);
     bot.user.setActivity("Bro Vivek is actually a god WTF");
+    let defaultChannel = bot.guild.channels.get('636834564450549770');
+    defaultChannel.sendMessage('Hello',{tts: true});
 });
 
 
