@@ -27,15 +27,13 @@ bot.on("ready", async() =>{
     const defaultChannel = bot.guild.channels.get('636834564450549770');
     defaultChannel.sendMessage('Hello',{tts: true});
     */
-   bot.channels.get('636833276123807766').sendMessage("DYG BOT IS BACK ONLINE");
+   //bot.channels.get('636833276123807766').sendMessage("DYG BOT IS BACK ONLINE");
 });
 
 
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.get('636833276123807766').send(`Welcome ${member.username}!`);
-    member.addRole('636846372665950208');
-    console.log(`${member.username} joined and was given the pleb role`);
+    member.guild.channels.get('688772681176449074').send(`Welcome ${member.username}!`);
 })
 
 
