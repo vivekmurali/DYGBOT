@@ -20,7 +20,7 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
-mongoose.connect(proces.env.DB_CONNECT, {
+mongoose.connect(process.env.DB_CONNECT, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useFindAndModify: false
