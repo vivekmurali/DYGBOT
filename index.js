@@ -60,7 +60,6 @@ bot.on("message", async message => {
     if (message.channel.type == 'dm') return;
     //let prefix = botconfig.prefix;
 
-
     // Message counter 
     // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
