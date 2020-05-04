@@ -4,7 +4,9 @@
   "description": "The new DYGBOT ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "d": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Vivek Murali",
   "license": "ISC",
@@ -12,5 +14,8 @@
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "mongoose": "^5.9.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
