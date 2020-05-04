@@ -106,11 +106,6 @@ bot.on("message", async message => {
                     message.member.removeRole('706953258098491465');
                     message.reply(`You've been promoted to King ${message.author.username}`);
                 } //KING
-                else if (data[0].msgCount > 1000) {
-                    message.member.addRole('706953153664516265');
-                    message.member.removeRole('706619615530319953');
-                    message.reply(`You've been promoted to High King ${message.author.username}`);
-                } //High King
             }
 
 
